@@ -52,7 +52,7 @@
             this.TlbLogin.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.TlbLogin.Controls.Add(this.pictureBox1, 0, 0);
             this.TlbLogin.Controls.Add(this.panel2, 1, 0);
-            this.TlbLogin.Location = new System.Drawing.Point(178, 105);
+            this.TlbLogin.Location = new System.Drawing.Point(289, 89);
             this.TlbLogin.Name = "TlbLogin";
             this.TlbLogin.RowCount = 1;
             this.TlbLogin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
