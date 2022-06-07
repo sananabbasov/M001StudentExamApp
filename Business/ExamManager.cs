@@ -27,6 +27,7 @@ namespace Business
         {
             var groupQuestion = _context.Exams
                 .Include(x=>x.Question)
+                .Include(x=>x.Group)
                 .Where(x=>x.GroupId == groupId)
                 .Skip(skip)
                 .Take(1)

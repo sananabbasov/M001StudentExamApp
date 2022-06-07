@@ -46,11 +46,12 @@
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.LblUserName = new System.Windows.Forms.Label();
             this.PnlExam.SuspendLayout();
             this.PnlStartQuiz.SuspendLayout();
             this.TlbLogin.SuspendLayout();
@@ -225,9 +226,9 @@
             this.panel2.Controls.Add(this.BtnClose);
             this.panel2.Controls.Add(this.BtnLogin);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.TxtPassword);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.TxtEmail);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -248,6 +249,7 @@
             this.BtnClose.Size = new System.Drawing.Size(22, 24);
             this.BtnClose.TabIndex = 7;
             this.BtnClose.UseVisualStyleBackColor = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // BtnLogin
             // 
@@ -275,17 +277,17 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Password";
             // 
-            // textBox2
+            // TxtPassword
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox2.Location = new System.Drawing.Point(45, 265);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(207, 27);
-            this.textBox2.TabIndex = 4;
+            this.TxtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.TxtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtPassword.ForeColor = System.Drawing.Color.Transparent;
+            this.TxtPassword.Location = new System.Drawing.Point(45, 265);
+            this.TxtPassword.Name = "TxtPassword";
+            this.TxtPassword.PasswordChar = '*';
+            this.TxtPassword.Size = new System.Drawing.Size(207, 27);
+            this.TxtPassword.TabIndex = 4;
             // 
             // label3
             // 
@@ -298,16 +300,16 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Username";
             // 
-            // textBox1
+            // TxtEmail
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.textBox1.Location = new System.Drawing.Point(45, 194);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 27);
-            this.textBox1.TabIndex = 2;
+            this.TxtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(84)))));
+            this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtEmail.ForeColor = System.Drawing.Color.Transparent;
+            this.TxtEmail.Location = new System.Drawing.Point(45, 194);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(207, 27);
+            this.TxtEmail.TabIndex = 2;
             // 
             // label2
             // 
@@ -331,12 +333,25 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Welcome !";
             // 
+            // LblUserName
+            // 
+            this.LblUserName.AutoSize = true;
+            this.LblUserName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LblUserName.ForeColor = System.Drawing.Color.Snow;
+            this.LblUserName.Location = new System.Drawing.Point(993, 25);
+            this.LblUserName.Name = "LblUserName";
+            this.LblUserName.Size = new System.Drawing.Size(123, 32);
+            this.LblUserName.TabIndex = 10;
+            this.LblUserName.Text = "userName";
+            this.LblUserName.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1838, 928);
+            this.Controls.Add(this.LblUserName);
             this.Controls.Add(this.TlbLogin);
             this.Controls.Add(this.PnlStartQuiz);
             this.Controls.Add(this.lblCorrect);
@@ -378,10 +393,11 @@
         private Button BtnClose;
         private Button BtnLogin;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox TxtPassword;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox TxtEmail;
         private Label label2;
         private Label label5;
+        private Label LblUserName;
     }
 }
